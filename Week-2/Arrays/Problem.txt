@@ -1,1 +1,24 @@
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+      
+     
+        Scanner sc = new Scanner(System.in);
+        int array[];
 
+        int noOfTestCase=0, sizeOfArray=0, k=0;
+        noOfTestCase = sc.nextInt();
+
+        for(int i=0; i<noOfTestCase;i++) {
+            sizeOfArray = sc.nextInt();
+            k = sc.nextInt();
+            array[] = new int[sizeOfArray];
+            for(int j=0;j<sizeOfArray;j++) {
+                array[j] = sc.nextInt();
+
+            }
+        }
+
+     
+
+    }
+}
