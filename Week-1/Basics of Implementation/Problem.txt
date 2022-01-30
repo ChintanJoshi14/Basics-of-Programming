@@ -1,1 +1,45 @@
+Question:
+It's 12 o'clock at midnight and Simon cannot sleep! So he decided to stare at the clock on his wall until he falls asleep. He saw the clock's hands and got to thinking 'How many times they'll pass each other until I fall asleep'. Imagine that he fell asleep at. Now, you must  figure out how many times clock's hands overlap from  to  (including  and ).
 
+
+Explanation : 
+In H hour, minute hand will complete H laps and hour hand will complete H/12 laps. For example, in 1 hr. there are 60 minutes. So for an hour, minute hand has to complete one whole lap around the clock i.e. 60 minutes. This states that when there's first overlapping between hour hand and minute hand, the minute hand has already completed 1 lap more than that of the hour hand. Therefore we have H = H/12 + 1. Hence for N total laps, H = H/12 + N laps.In conclusion, no. of laps(N) = H-H/12 = 11H/12 = (11(H * 60 + M)) / (12*60)
+
+
+My implementation:
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+      
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+        int n = Integer.parseInt(str.split(":"));
+        System.out.println(n);
+  }
+}
+
+Reference:
+
+import java.util.Scanner;
+
+class TestClass {
+
+    public static void main(String args[] ) throws Exception {
+
+      Scanner sc = new Scanner (System.in);
+
+      String [] time = sc.nextLine().split(":");
+
+      int hh = Integer.parseInt(time[0]);
+
+      int mm = Integer.parseInt(time[1]);
+
+      int N = (11*(hh*60+mm))/(12*60); // N = (hh-hh/12) 
+
+      System.out.print(N+1);
+
+  }
+
+}
