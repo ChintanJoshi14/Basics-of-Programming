@@ -1,1 +1,33 @@
+Question:
+You are given an integer such that the XOR of two integers is . In short (⊕ denotes the bitwise the XOR operation). Out of all possible pairs of and, you must find two integers such that their product is maximum. Let us define as the length of in its binary representation. Then, and .
+
+Solution:
+
+import java.util.*;
+ 
+
+class TestClass {
+
+   public static void main(String args[] ) throws Exception {
+
+
+       Scanner sc = new Scanner(System.in);
+
+       int inputNumber = sc.nextInt();
+
+       int len = (int)(Math.log(inputNumber)/Math.log(2));
+
+       int num1 = (int)Math.pow(2,len)-1;
+
+       int num2 = numm1^inputNumber;
+
+       System.out.println((long)num1*(long)num2);
+
+   }
+
+}
+
+
+       
+    
 
